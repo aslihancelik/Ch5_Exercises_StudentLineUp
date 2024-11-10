@@ -1,6 +1,8 @@
 // Ch5_Exercises_StudentLineUp.cpp : This file contains the 'main' function. Program execution begins and ends there.
 // Chapter 5 Exercise 14
 // This program prompts the user to enter the number of students in the class, then loops to read that many names.
+//
+//Programmer: Aslihan Aria Celik
 
 #include <iostream>
 #include <string>
@@ -32,14 +34,17 @@ int main()
 
 	for (int i = 1; i < numberOfStudents; i++) {
 		cin >> currentName;
+		//compare and update first in line
 		if (currentName < firstInLine) {
 			firstInLine = currentName;
 		}
+		//compare and update last in line
 		if (currentName > lastInLine) {
 			lastInLine = currentName;
 		}
 	}
 
+	//Display the result
 	cout << "The student at the front of the line is: " << firstInLine << endl;
 	cout << "The student at the end of the line is: " << lastInLine << endl;
 
